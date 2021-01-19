@@ -86,7 +86,7 @@ def to_camel_case(underscore_str):
     word = underscore_str.split('_')
     queue = ''
     for i in word:
-        queue += i.title() +" " if i !='' else ''
+        queue += i[0].upper()+i[1:] +" " if i !='' else ''
 
     camelcase_str = queue[0].lower() + queue[1:]
     return camelcase_str
